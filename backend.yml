@@ -1,5 +1,5 @@
 - name: Backend
-  host: all
+  hosts: all
   become: yes
   tasks:
   - name: installing NODEJS
