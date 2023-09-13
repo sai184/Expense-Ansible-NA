@@ -23,7 +23,7 @@
         state: directory
 
     - name:  Download frontend Code and Extract it
-      ansible.builtin.get_url:
+      ansible.builtin.unarchive:
         src: https://expense-artifacts.s3.amazonaws.com/frontend.zip
         dest: /usr/share/nginx/html
         remote_src: yes
