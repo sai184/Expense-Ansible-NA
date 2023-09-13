@@ -4,9 +4,15 @@
   tasks:
   - name: installing NODEJS
     ansible.builtin.shell: curl -sL https://rpm.nodesource.com/setup_lts.x | bash
+
   - name: Install NodeJS
     ansible.builtin.dnf:
       name: nodejs
+
+  - name: Copy Backend Service File
+    ansible.builtin.copy:
+        src: backend.service
+        dest: /etc/systemd/system/backend.service
 
   - name: adding application user
     ansible.builtin.user:
