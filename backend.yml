@@ -1,7 +1,7 @@
--name: Backend
-host: all
-become: yes
-tasks:
+- name: Backend
+  host: all
+  become: yes
+  tasks:
   - name: installing NODEJS
     ansible.builtin.shell: curl -sL https://rpm.nodesource.com/setup_lts.x | bash
   - name: Install NodeJS
