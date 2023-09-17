@@ -3,6 +3,10 @@
     register: npm
     ignore_errors: yes
 
+  - name: Read npm
+    ansible.builtin.debug:
+      msg: "{{npm}}"
+
   - name: installing NODEJS
     ansible.builtin.shell: curl -sL https://rpm.nodesource.com/setup_lts.x | bash
     when: npm.rc != 0
