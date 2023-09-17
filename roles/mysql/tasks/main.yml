@@ -1,4 +1,4 @@
-tasks:
+
   - name: Copy MySQL Repo
     ansible.builtin.copy:
       src: mysql.repo
