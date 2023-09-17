@@ -1,7 +1,0 @@
-- name: Frontend Setup
-  hosts: all
-  become: yes
-
-
-
-
